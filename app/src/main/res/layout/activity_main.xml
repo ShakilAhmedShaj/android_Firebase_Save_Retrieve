@@ -33,5 +33,10 @@
         android:text="ADD STUDENT"
         android:textStyle="bold" />
 
+    <ListView
+        android:id="@+id/listView_student_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
 
 </LinearLayout>
