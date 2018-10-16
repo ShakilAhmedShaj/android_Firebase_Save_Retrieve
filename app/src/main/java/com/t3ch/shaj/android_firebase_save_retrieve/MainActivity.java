@@ -9,13 +9,16 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class MainActivity extends AppCompatActivity {
 
     private EditText studentName;
     private Button addStudent;
-    private Spinner deparments;
+    private Spinner departments;
 
-
+    DatabaseReference databaseStudent;
 
 
     @Override
@@ -23,9 +26,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        databaseStudent = FirebaseDatabase.getInstance().getReference("student");
+
+
         studentName = findViewById(R.id.editTextNameID);
         addStudent = findViewById(R.id.addStudentID);
-        deparments = findViewById(R.id.departmentID);
+        departments = findViewById(R.id.departmentID);
 
         addStudent.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,9 +47,15 @@ public class MainActivity extends AppCompatActivity {
 
 
         String name = studentName.getText().toString().trim();
-        String department = deparments.getSelectedItem().toString().trim();
+        String department = departments.getSelectedItem().toString().trim();
 
         if (!TextUtils.isEmpty(name)) {
+
+            String id = databaseStudent.push().getKey();
+            Student student = new Student(id, name, department);
+            databaseStudent.child(id).setValue(student);
+
+            Toast.makeText(MainActivity.this, "New Student Added", Toast.LENGTH_LONG).show();
 
 
         } else {
