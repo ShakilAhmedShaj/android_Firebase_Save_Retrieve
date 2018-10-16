@@ -7,12 +7,12 @@ public class Semester {
 
     private String studentid;
     private String studentSemester;
-    private String studentCGPA;
+    private double studentCGPA;
 
     public Semester() {
     }
 
-    public Semester(String studentid, String studentSemester, String studentCGPA) {
+    public Semester(String studentid, String studentSemester, double studentCGPA) {
         this.studentid = studentid;
         this.studentSemester = studentSemester;
         this.studentCGPA = studentCGPA;
@@ -26,7 +26,9 @@ public class Semester {
         return studentSemester;
     }
 
-    public String getStudentCGPA() {
+    public double getStudentCGPA() {
         return studentCGPA;
     }
 }
+
+//done

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/textViewSemester"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1st Semester"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textViewCGPA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="3.50"
+        android:textSize="20dp" />
+
+</LinearLayout>
