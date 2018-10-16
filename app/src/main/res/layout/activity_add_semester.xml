@@ -27,6 +27,7 @@
     </Spinner>
 
     <EditText
+        android:id="@+id/studentCGPA_edit_id"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
