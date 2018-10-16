@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">android_Firebase_Save_Retrieve</string>
+
+    <array name="departments">
+
+        <item>CSE</item>
+        <item>EEE</item>
+        <item>Civil</item>
+        <item>BBA</item>
+
+
+    </array>
 </resources>
